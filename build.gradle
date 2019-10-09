@@ -1,0 +1,38 @@
+apply plugin: 'java'
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group = "karoisuzvards"
+version = "1.0"
+
+// Versioning of dependencies
+wrapper.gradleVersion = '5.5.1'
+def cucumberVersion = '4.7.1'
+def junitVersion = '5.5.0'
+def webDriverManagerVersion = '3.7.1'
+def springBootVersion='2.1.9.RELEASE'
+def selenideVersion='5.3.1'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-spring:${cucumberVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    testImplementation "com.codeborne:selenide:${selenideVersion}"
+
+    testImplementation "io.github.bonigarcia:webdrivermanager:${webDriverManagerVersion}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:${junitVersion}"
+
+}
+
+test {
+    useJUnitPlatform()
+}
