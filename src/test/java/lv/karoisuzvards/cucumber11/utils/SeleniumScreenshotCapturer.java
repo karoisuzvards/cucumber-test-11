@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Use Selenium itself to capture screenshots of browser
- * Problem is with full page screenshot -
+ * Problem is with full page screenshot - only viewport is captured
  */
 public class SeleniumScreenshotCapturer implements ScreenshotCapturer {
     @Override

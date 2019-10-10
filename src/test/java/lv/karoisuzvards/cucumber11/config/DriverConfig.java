@@ -6,6 +6,7 @@ public class DriverConfig {
 
     //during class load setup Webdriver configuration
     static {
+        //TODO: support multiple browsers here
         WebDriverManager.chromedriver()
                 .setup();
     }

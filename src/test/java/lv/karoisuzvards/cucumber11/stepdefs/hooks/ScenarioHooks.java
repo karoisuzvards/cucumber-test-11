@@ -8,7 +8,9 @@ import lv.karoisuzvards.cucumber11.utils.ScreenshotCapturer;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-
+/**
+ * Contains actions that should be run before and after scenarios
+ */
 public class ScenarioHooks {
 
     private static final String IMAGE_PNG = "image/png";

@@ -10,6 +10,10 @@ import java.util.Locale;
 
 import static java.util.Locale.ENGLISH;
 
+/**
+ * Custom data table types should be registered here
+ * See https://cucumber.io/docs/cucumber/configuration/
+ */
 public class TypeRegistryConfiguration implements TypeRegistryConfigurer {
 
     @Override

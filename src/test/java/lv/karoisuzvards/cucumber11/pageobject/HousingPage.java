@@ -19,6 +19,10 @@ public class HousingPage {
 
     private final WebElement sortingDropdown = $("#searchform > div:nth-child(3) > div.search-sort > div > ul");
 
+    /**
+     * Contains mappings between SortingType enum and real translations
+     * Use getSortingElementBasedOnType(SortingType)
+     */
     private final Map<SortingType, String> sortings = Map.of(
             NEWEST, "newest",
             PRICE_ASC,  "price ↑",
