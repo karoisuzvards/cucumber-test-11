@@ -7,6 +7,7 @@ import lv.karoisuzvards.cucumber11.pageobject.LandingPage;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class NavigationStepsDefs {
 
@@ -23,6 +24,11 @@ public class NavigationStepsDefs {
     @Given("site is open")
     public void siteIsOpen() {
         open(siteConfig.getSiteUrl());
+        var window = getWebDriver().manage()
+                .window();
+
+        window.maximize();
+        window.fullscreen();
     }
 
     @And("housing is open")

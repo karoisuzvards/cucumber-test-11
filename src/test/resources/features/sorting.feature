@@ -6,4 +6,5 @@ Feature: Housing - sorting
 
   Scenario: Sorting can be done by price
     When sorting is done by lowest price
+    Then all items are sorted by lowest price
 
